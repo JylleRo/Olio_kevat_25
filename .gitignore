@@ -1,4 +1,6 @@
 *.user
 *.json
 *.cmake
+*.txt
 teht2/build
+teht3/build
