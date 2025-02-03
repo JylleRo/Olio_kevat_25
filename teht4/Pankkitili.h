@@ -6,10 +6,11 @@ using namespace std;
 
 class Pankkitili{
 public:
+    Pankkitili();
     Pankkitili(string);
-    double getBalance();
-    bool deposit(double);
-    bool withdraw(double);
+    virtual double getBalance();
+    virtual bool deposit(double);
+    virtual bool withdraw(double);
 protected:
     string omistaja;
     double saldo = 0;

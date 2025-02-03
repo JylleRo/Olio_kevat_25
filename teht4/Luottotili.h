@@ -4,9 +4,11 @@
 
 class Luottotili : public Pankkitili{
 public:
+    Luottotili();
     Luottotili(string,double);
-    bool deposit(double);
-    bool withdraw(double);
+    bool deposit(double) override;
+    bool withdraw(double) override;
+    double getBalance() override;
 protected:
     double luottoRaja = 0;
 

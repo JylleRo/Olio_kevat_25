@@ -1,6 +1,6 @@
-#include "main.cpp"
 #include "Pankkitili.h"
 
+Pankkitili::Pankkitili(){}
 
 Pankkitili::Pankkitili(string omistaja)
 {
@@ -14,22 +14,23 @@ double Pankkitili::getBalance()
 
 bool Pankkitili::deposit(double maara)
 {
-    if (maara > 0) {    //Jos maara on suurempi kuin nolla
+    if (maara > 0) {
         saldo += maara;
+        cout << "Kayttotili: talletus " << maara << " tehty, uusi saldo " << getBalance() << "\n";
         return true;
     }
     else {
         return false;
     }
-
+}
 bool Pankkitili::withdraw(double maara)
 {
-    if (saldo > 0 && saldo >= maara) { // Tilillä on enemmän kuin 0, ja saldo on joko enemmän tai yhtäsuuri kuin nostettava maara
+    if (saldo > 0 && saldo >= maara) {
         saldo -= maara;
+        cout << "Kayttotili: nosto " << maara << " tehty, uusi saldo " << getBalance() << "\n";
         return true;
     }
     else {
         return false;
     }
-
 }

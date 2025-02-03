@@ -19,8 +19,9 @@ public:
     bool nosto(double);
     bool luotonMaksu(double);
     bool luotonNosto(double);
+    bool tiliSiirto(double, Asiakas&);
 
-private:
+    private:
     string nimi;
     Pankkitili kayttotili;
     Luottotili luottotili;
